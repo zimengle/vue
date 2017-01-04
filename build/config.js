@@ -88,7 +88,9 @@ const builds = {
   'weex-compiler': {
     weex: true,
     entry: path.resolve(__dirname, '../src/entries/weex-compiler.js'),
+    // entry: path.resolve(__dirname, '../examples/vue-native/hello.vue'),
     dest: path.resolve(__dirname, '../packages/weex-template-compiler/build.js'),
+    // dest: path.resolve(__dirname, '../examples/vue-native/hello.js'),
     format: 'cjs',
     external: ['he', 'de-indent']
   }

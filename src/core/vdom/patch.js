@@ -86,6 +86,7 @@ export function createPatchFunction (backend) {
 
   let inPre = 0
   function createElm (vnode, insertedVnodeQueue, parentElm, refElm, nested) {
+    debugger;
     vnode.isRootInsert = !nested // for transition enter check
     if (createComponent(vnode, insertedVnodeQueue, parentElm, refElm)) {
       return
@@ -117,6 +118,7 @@ export function createPatchFunction (backend) {
         ? nodeOps.createElementNS(vnode.ns, tag)
         : nodeOps.createElement(tag, vnode)
       setScope(vnode)
+
 
       /* istanbul ignore if */
       if (__WEEX__) {
@@ -239,6 +241,7 @@ export function createPatchFunction (backend) {
   }
 
   function initComponent (vnode, insertedVnodeQueue) {
+    debugger;
     if (vnode.data.pendingInsert) {
       insertedVnodeQueue.push.apply(insertedVnodeQueue, vnode.data.pendingInsert)
     }
